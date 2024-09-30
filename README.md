@@ -6,6 +6,22 @@ Aby uruchomić aplikację należy na maszynie z zainstalowanym oprogramowaniem d
 ```
 docker compose up
 ```
+lub dla maszyny z zainstalowanym jedynie dockerem
+```
+docker build -t moja_aplikacja . && docker run -d -p 8080:8080 moja_aplikacja
+```
+Następnie aplikacja powinna być dostępna w wyszukiwarce pod adresem
+```
+http://localhost:8080/
+```
+
+Aplikacja udostępnia:
+| Link | Opis |
+| --- | --- |
+| / | widok główny  |
+| /kalendarz?year=2024&month=9&day=23  | widok kalendarza miesięcznego  |
+| /wydarzenie/5 | widok określonego wydarzenia |
+| /filtruj/nauka | widok wydarzeń z określonym tagiem |
 
 ### Środowisko dla testów lokalnych
 ```
