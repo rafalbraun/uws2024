@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <div class="container">
+        <div class="events-list">
+            <div class="event">
+                <h3><a href="#">{{event.name}}</a></h3>
+                <p>Data: {{event.start_time}}</p>
+                <p>Miejsce: {{event.location}}</p>
+                <p>Opis: {{event.long_description}}</p>
+                <p>Link rejestracyjny: <a href="{{event.registration_link}}">{{event.registration_link}}</a></p>
+                <p>Obraz: https://rekrutacja.teamwsuws.pl{{event.image_url}}</p>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+

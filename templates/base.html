@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>template</title>
+		<link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico') }}"> 
+	    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+	</head>
+	<style>
+    </style>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="/">Strona Główna</a>
+        </div>
+    </header>
+	<main class="main-content">
+	    {% block content %} 
+	    {% endblock %}
+	</main>
+
+</body>
+</html>

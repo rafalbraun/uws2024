@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <div class="container">
+        <div class="sidebar">
+            <h2>Kalendarz {{year}}/{{month}}/{{day}}</h2>
+            <div class="calendar">
+            	{% for key, value in thisdict.items() %}
+            	{%if day==key.day and value|length>0 %}
+                <div class="day active events"><a href="{{ url_for('kalendarz', year=year, month=month, day=key.day) }}">{{ key.day }}</a></div>
+                {%elif day==key.day%}
+                <div class="day active"><a href="{{ url_for('kalendarz', year=year, month=month, day=key.day) }}">{{ key.day }}</a></div>
+                {%elif value|length>0%}
+                <div class="day events"><a href="{{ url_for('kalendarz', year=year, month=month, day=key.day) }}">{{ key.day }}</a></div>
+                {%else%}
+                <div class="day"><a href="{{ url_for('kalendarz', year=year, month=month, day=key.day) }}">{{ key.day }}</a></div>
+                {%endif%}
+                {% endfor %}
+            </div>
+        </div>
+		<div class="events-list">
+		<h2>Nadchodzące wydarzenia</h2>
+        {% for d, events in thisdict.items() %}
+            {% if d.day == day %}
+                {% for event in events %}
+	            <div class="event">
+	                <h3><a href="/wydarzenie/{{event.id}}">{{event.name}}</a></h3>
+	                <p>Data: {{event.start_time}}</p>
+	                <p>Opis: {{event.short_description}}</p>
+                {% for tag in event.tags %}
+                    <a href="/filtruj/{{tag.name}}">{{tag.name}}</a>
+                {% endfor %}
+	            </div>
+                {% endfor %}
+            {% endif %}
+        {% endfor %}
+		</div>
+    </div>
+
+{% endblock %}

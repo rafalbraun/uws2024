@@ -1,0 +1,18 @@
+version: '3.8'
+networks:
+  siec:
+    name: siec
+services:
+  uws-2024:
+    container_name: aplikacja
+    ports:
+      - 8080:8080
+    build:
+      dockerfile: Dockerfile
+      context: .
+    tty: true
+    networks:
+      - siec
+volumes:
+  db:
+    driver: local

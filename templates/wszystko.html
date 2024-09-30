@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <div class="container">
+        <!-- Lewa kolumna: Wybór miesiąca i roku -->
+        <div class="sidebar">
+            <h2>Kalendarz</h2>
+            <form method="get" action="{{ url_for('kalendarz') }}">
+            <div class="date-selectors">
+
+                <!-- Wybór miesiąca -->
+                <label for="month">{{ form.month.label }}:</label>
+                {{ form.month() }}
+
+                <br>
+                
+                <!-- Wybór roku -->
+                <label for="year">{{ form.year.label }}:</label>
+                {{ form.year() }}
+
+                <!-- Ukryte pole dzień - domyślnie równe 1 -->
+                {{ form.day(value=1) }}
+
+            </div>
+            {{ form.submit() }}
+            </form>
+        </div>
+
+        <div class="events-list">
+        <h2>Nadchodzące wydarzenia {%if tag is defined %} [{{tag}}] {%endif%}</h2>
+        {% for event in events %}
+            <div class="event">
+                <h3><a href="/wydarzenie/{{event.id}}">{{event.name}}</a></h3>
+                <p>Data: {{event.start_time}}</p>
+                <p>Opis: {{event.short_description}}</p>
+                {% for tag in event.tags %}
+                    <a href="/filtruj/{{tag.name}}">{{tag.name}}</a>
+                {% endfor %}
+            </div>
+        {% endfor %}
+        </div>
+
+    </div>
+
+{% endblock %}

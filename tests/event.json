@@ -1,0 +1,25 @@
+{
+    "id":3,
+    "name":"Jubileuszowy Piknik Naukowy z Uniwersytetem w Siedlcach\t",
+    "start_time":"2024-10-02T10:00:00",
+    "duration":2,
+    "location":"ul. żytnia 39, 08-110 Siedlce\t",
+    "image_url":"/media/442435186_947649987362224_3464617144294814090_n.webp",
+    "registration_link":"https://www.facebook.com/events/957459285821359/",
+    "short_description":"Jubileuszowy Piknik Naukowy UwS to dzień pełen atrakcji dla dzieci i dorosłych, z warsztatami, grami i występami.",
+    "long_description":"\"Zapraszamy na niesamowity Jubileuszowy Piknik Naukowy z Uniwersytetem w Siedlcach! 🎉\nPiknik rozpocznie się od wyjątkowego występu Akademickiego Chóru „Vocalis” pod kierunkiem Agnieszki Komorowskiej, w towarzystwie dzieci z Przedszkola Muzycznego Nutka.\n🎵🎶\nNa najmłodszych uczestników czeka wiele atrakcji, takich jak malowanie twarzy, tatuaże czy animacje balonowe. 🎨🎈 Ale to nie wszystko! Czekają na Was również fascynujące międzynarodowe warsztaty sportowe, prezentacje przyrodnicze, gry terenowe, wystawa broni i umundurowania z elementami rekonstrukcji historycznej. 🏃\u200d♂️🌿🔬\nNie zabraknie również zajęć z pierwszej pomocy, profilaktyki zdrowotnej i wielu innych! 💼💉 Dla miłośników zwierząt przygotowaliśmy porady behawioralne, hobby horse 🐴 oraz ścieżkę sensoryczną. 🐾🌿\nZachęcamy również do odwiedzenia mobilnego studia kosmetologicznego, które będzie dostępne dla uczestników Pikniku. 💅💄\nDołączcie do naszej akademickiej społeczności na wyjątkowym Pikniku Naukowym UwS, gdzie nauka spotyka się z zabawą i staje się przyjemnością! ❤️✨\"",
+    "tags":[
+        {
+            "id":1,
+            "name":"piknik"
+        },
+        {
+            "id":2,
+            "name":"popularyzacja nauki"
+        },
+        {
+            "id":3,
+            "name":"uws"
+        }
+    ]
+}
