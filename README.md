@@ -3,9 +3,9 @@ Aplikacja na potrzeby rekrutacji na stanowisko Fullstack Developera
 
 ### Test aplikacji - konteneryzacja
 Aby uruchomić aplikację należy na maszynie z zainstalowanym oprogramowaniem docker i docker compose wykonać następujące polecenie z poziomu katalogu zawierającego plik docker-compose.yml
-`
+```
 docker compose up
-`
+```
 
 ### Środowisko dla testów lokalnych
 ```
